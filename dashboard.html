@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -57,3 +58,64 @@
   <script src="script.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toggle Dark Mode -->
+  <div class="toggle-container">
+    <input type="checkbox" id="toggleDark">
+    <label for="toggleDark" class="toggle-label"><span class="moon"></span></label>
+  </div>
+
+  <div class="dashboard">
+    <nav class="sidebar">
+      <h2>Flup</h2>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Orders</li>
+        <li>Products</li>
+        <li>Customers</li>
+        <li><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <header>
+        <h1>Dashboard</h1>
+        <div class="cards">
+          <div class="card">Total Sales</div>
+          <div class="card">New Orders</div>
+          <div class="card">Customers</div>
+        </div>
+      </header>
+
+      <section class="main-section">
+        <h2>Manajemen Produk</h2>
+        <input type="text" id="namaProduk" placeholder="Nama Produk">
+        <input type="text" id="hargaProduk" placeholder="Harga Produk">
+        <button onclick="tambahProduk()">Tambah</button>
+
+        <table id="tabelProduk">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Harga</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 7cd3f700b6717f19b73b387dd0ab0b94aee63bf1
