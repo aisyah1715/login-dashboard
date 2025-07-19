@@ -16,6 +16,7 @@
             <input type="password" id="password" required>
 
             <button type="submit">Masuk</button>
+            <p id="error" style="color: red; margin-top: 10px;"></p>
         </form>
     </div>
 
@@ -23,11 +24,20 @@
         function login(event) {
             event.preventDefault();
 
-            // Simulasi login berhasil
-            localStorage.setItem("loggedIn", "true");
+            const inputUsername = document.getElementById("username").value;
+            const inputPassword = document.getElementById("password").value;
 
-            // Arahkan ke dashboard
-            window.location.href = "dashboard.html";
+            // Ganti dengan username & password yang kamu inginkan
+            const validUsername = "admin";
+            const validPassword = "123456";
+
+            if (inputUsername === validUsername && inputPassword === validPassword) {
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "dashboard.html";
+            } else {
+                document.getElementById("error").innerText = "Username atau password salah!";
+            }
+
             return false;
         }
     </script>
